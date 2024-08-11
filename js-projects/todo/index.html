@@ -1,0 +1,43 @@
+<centre>
+
+
+<input id="input">
+
+<button onclick="add()">Add</button>
+<ul id="list">
+    <li>Hello
+        <button onclick="del(event)">delete</button>
+    </li>
+    
+</ul>
+</centre>
+
+<script>
+    var ul=document.getElementById("list")
+    var input=document.getElementById("input")
+    var rem=document.getElementById("rem")
+    function add(){
+        var list=document.createElement("li")
+         list.innerHTML=input.value +  " <button onclick='del(event)'>delete</button>"
+        ul.append(list)
+    }
+    function del(event){
+        event.target.parentElement.remove()
+
+    }
+</script>
+
+<style>
+    html{
+        
+        background-color: rgb(255, 255, 255);
+    }
+
+    button{
+        color:rgb(0, 0, 0);
+        background-color: rgb(158, 165, 223);
+        outline-style:auto ;
+       
+}
+
+</style>
